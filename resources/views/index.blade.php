@@ -17,14 +17,15 @@
                 <div class="col-3">
                     <div class="card text-left" style="width: 12rem;">
                         <div class="card-body">
+                            <p>
+                                <img src="{{ asset('storage/images/' . $list->image) }}" alt="" style="width: 150px">
+                            </p>
+
                             <h5 class="card-title" style="text-align: center">{{ $list->name }}</h5>
                             <p class="card-text" style="text-align: center">{{ $list->description }}</p><br>
                             <p class="card-text text-dark" style="text-align: center">{{ $list->price }}</p><br>
                             <p class="card-text text-danger" style="text-align: center">Số lượt
                                 xem: {{ $list->view_count }}</p><br>
-                            <p>
-                                <img src="{{ asset('storage/images/' . $list->image) }}" alt="" style="width: 150px">
-                            </p>
 
                             <!-- Nút XEM chuyển hướng người dùng sang trang chi tiết -->
                             <a href="{{ route('show', $list->id) }}" class="btn btn-primary">Xem</a>

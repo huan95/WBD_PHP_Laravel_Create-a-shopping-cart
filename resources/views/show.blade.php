@@ -16,15 +16,20 @@
             <div class="col-12">
                 <div class="card text-left" style="width: 100%;">
                     <div class="card-body">
-                        <h5 class="card-title"
-                            style="color: white; font-size: 30px; text-align: center">{{ $list->name }}</h5>
-                        <p class="card-text" style="color: white">{{ $list->description }}</p><br>
-                        <p class="card-text text-dark" style="color: white">${{ $list->price }}</p><br>
-                        <p class="card-text text-danger" style="color: white">Số lượt xem: {{ $list->view_count }}</p>
-                        <br>
                         <p>
                             <img src="{{ asset('storage/images/' . $list->image) }}" alt="" style="width: 150px">
                         </p>
+                        <h5 class="card-title"
+                            style="color: white; font-size: 30px; text-align: center">{{ $list->name }}</h5>
+                        <h6 class="card-text"
+                            style="color: white; font-size: 20px; text-align: center">{{ $list->description }}</h6><br>
+                        <h6 class="card-text text-dark" style="color: white; font-size: 20px; text-align: center">
+                            ${{ $list->price }}</h6><br>
+                        <h6 class="card-text text-danger" style="color: white; font-size: 20px; text-align: center">Số
+                            lượt xem: {{ $list->view_count }}</h6>
+                        <br>
+
+                        <input type="submit" value="Mua Ngay">
 
                         <!-- Nút XEM chuyển hướng người dùng quay lại trang danh sách sản phẩm -->
                         <a href="{{ route('index') }}" class="btn btn-primary">< Quay lại </a>
